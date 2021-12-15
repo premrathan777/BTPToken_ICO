@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BTP Token ICO Sale</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+   <div class="container">
+     <div class="row">
+       <div class="col-lg-12">
+         <h1 class="text-center mt-2"> BTP Token ICO SALE</h1>
+         <hr>
+         <br>
+       </div>
+
+       <div id="loader" class="col-lg-12">
+         <p class="text-center">Loading...</p>
+       </div>
+
+       <br>
+
+       <div id="content" class="mx-auto text-center" style="display: none;">
+        <p>Introducing "BTP Token"
+          Token price is <span class="token-price"></span> Ether. You currently have <span class="BTP-balance"></span>&nbsp;BTP coins.
+        </p>
+        <br>
+        <form onSubmit="App.buyTokens(); return false;" role="form" class="form">
+          <div class="form-group">
+          <div class="input-group">
+              <label for="numberOfTokens"></label>
+              <input type="number" class="form-control form-control-lg" name="number" value="1" min="1" placeholder="Enter No. of tokens" id="numberOfTokens" pattern="[0-9]"> 
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="submit">Buy Tokens</button>
+            </div>
+          </div>
+          </div>
+       </form>
+       
+       <br>
+
+       <div class="progress">
+         <div id="progress" class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+       </div>
+
+       <br>
+
+       <p> <span class="tokens-sold"></span> / <span class="tokens-available"> Tokens available</span> Tokens sold</p>
+       
+       <hr>
+
+       <p id="accountAddress"></p>
+
+      </div>
+       
+     </div>
+
+   </div>
+
+  <script src="js/web3.min.js"></script>
+  <script src="js/truffle-contract.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
